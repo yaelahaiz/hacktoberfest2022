@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://hacktoberfest.digitalocean.com/">
-        <img src="https://raw.githubusercontent.com/keshavsingh4522/hacktoberfest2021/35fc6060c5ddead5792f29a2437fea160dbe9804/Assets/logo-hacktoberfest-full.f42e3b1.svg" width="30%">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq1vUSZY6iOj646FJrS4CuQGRzk22I76C_tA&usqp=CAU" width="30%">
     </a>
 </p>
 
