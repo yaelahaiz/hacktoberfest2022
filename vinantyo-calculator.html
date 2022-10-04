@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+        body {
+        background-color: #1B1734;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+
+    }
+
+    h1 {
+        letter-spacing: 4px;
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: #a89aff;
+    }
+
+    .transbox {
+        margin: 0 auto;
+        position: relative;
+        padding: 20px;
+        max-width: 680px;
+        background: rgba(255, 255, 255, .2);
+    }
+
+    .bungkus p {
+        font-size: 18px;
+    }
+
+    img {
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+        border: 2px transparent;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        margin: 5px;
+    }
+
+    img:hover {
+        transform: scale(1.15);
+        box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+
+    p.miring {
+        font-style: italic;
+        font-size: 18px;
+    }
+
+    p.bold {
+        font-weight: bold;
+    }
+
+    button {
+        padding: 7px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 200px;
+    }
+
+    button.blue {
+        background-color: #3498db;
+    }
+
+    button.green {
+        background-color: #2ecc71;
+    }
+
+    button.orange {
+        background-color: orangered;
+    }
+    table{
+        margin: 0px auto;
+        text-align: left;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.2</title>
+</head>
+<script lang="JavaScript">
+    function tekan()
+    {
+    var namastr = (document.fform.nama.value);
+    var alamatstr = (document.fform.alamat.value);
+    var kelamin = (document.fform.jenis.value);
+    var status = (document.fform.status.value);
+    document.fform.onama.value = namastr;
+    document.fform.oalamat.value = alamatstr;
+    document.fform.ojenis.value = kelamin;
+    document.fform.ostatus.value = status;
+    alert("Data berhasil di input !");
+    }
+    function jumlah(){
+        var input1 = parseInt((document.fform.input1.value));
+        var input2 = parseInt((document.fform.input2.value));
+        var operator = (document.fform.op.value);
+        var hasil;
+
+        if (operator == '+') {
+            hasil = input1 + input2;
+            document.getElementById('hasil').innerHTML = '<h2> Hasilnya adalah = ' + hasil, '</h2>';
+        }
+        if (operator == '-'){
+            hasil = input1 - input2;
+            document.getElementById('hasil').innerHTML = '<h2> Hasilnya adalah = ' + hasil, '</h2>';
+        }
+        if (operator == '*'){
+            hasil = input1 * input2;
+            document.getElementById('hasil').innerHTML = '<h2> Hasilnya adalah = ' + hasil, '</h2>';
+        }
+        if (operator == '/'){
+            hasil = input1 / input2;
+            document.getElementById('hasil').innerHTML = '<h2> Hasilnya adalah = ' + hasil, '</h2>';
+        }
+    }
+</script>
+<body>
+    <form name="fform">
+    <h1>Pertemuan 15 dan 16</h1>
+    <div class="transbox">
+        <table width="60%">
+        <tr>
+            <td>Nama Anda</td>
+            <td><input type="text" name="nama"></td>
+        </tr>
+        <tr>
+            <td>Alamat</td>
+            <td><input type="text" name="alamat"></td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td><input type="radio" name="jenis" value="Pria">Pria <input type="radio" name="jenis" value="Wanita">Wanita</td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td><select name="status">
+                <option value="Bekerja">Bekerja</option>
+                <option value="Kuliah">Kuliah</option>
+                <option value="Bekerja + Kuliah">Bekerja + Kuliah</option>
+                <option value="Menganggur">Menganggur</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="kirim" onclick="tekan()"> <input type="reset" value="ulang"></td>
+        </tr>
+        <tr>
+            <td><h2>Hasil</h2></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jadi Nama anda adalah</td>
+            <td><input type="text" name="onama" readonly></td>
+        </tr>
+        <tr>
+            <td>Alamat Anda di</td>
+            <td><input type="text" name="oalamat" readonly></td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin Anda adalah</td>
+            <td><input type="text" name="ojenis" readonly></td>
+        </tr>
+        <tr>
+            <td>Status anda saat ini</td>
+            <td><input type="text" name="ostatus" readonly></td>
+        </tr>
+    </table>
+    <br>
+    <h2>Program Calculator</h2>
+    <table width="60%" style="text-align: center;">
+        <tr>
+            <td><h2>Nilai 1</h2></td>
+            <td></td>
+            <td><h2>Nilai 2</h2></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="input1"></td>
+            <td><select name="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select></td>
+            <td><input type="text" name="input2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="kirim" onclick="jumlah()"><input type="reset" value="ulang" onclick="document.getElementById('hasil').innerHTML = '';"></td>
+            <td></td>
+        </tr>
+    </table>
+    <div id="hasil"></div>
+</div>       
+</form>
+</body>
+</html>
