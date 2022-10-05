@@ -14,12 +14,14 @@ string isPalindrome(string S)
 	reverse(P.begin(), P.end());
 
 	// If S is equal to P
-	if (S == P) {
+	if (S == P)
+	{
 		// Return "Yes"
 		return "Yes";
 	}
 	// Otherwise
-	else {
+	else
+	{
 		// return "No"
 		return "No";
 	}
