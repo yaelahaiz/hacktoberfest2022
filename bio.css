@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+h2, h5 {
+	color: purple;
+	font-family: 'Mochiy Pop One', sans-serif;
+}
+
+h3 {
+	font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.warna-text-tabel {
+	color: #2F86A6;
+}
+
+.cinta {
+	color: pink;
+}
+
+#sticky-footer {
+	bottom: 0;
+	top: 0;
+}
+
+.kelas {
+	color: wheat;
+}
